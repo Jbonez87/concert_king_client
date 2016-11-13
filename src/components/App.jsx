@@ -14,7 +14,7 @@ class App extends Component {
     e.preventDefault();
     let zip = e.target.value;
     if (zip) {
-      fetch(`http://concert-king-api.herokuapp.com/services/ticketmaster/shows/${zip}`)
+      fetch(`https://concert-king-api.herokuapp.com/services/ticketmaster/shows/${zip}`)
       .then((response) => {
         response.json().then(concerts => this.setState({
           show: concerts._embedded.events,
